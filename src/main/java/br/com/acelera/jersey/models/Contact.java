@@ -27,10 +27,10 @@ public class Contact implements Serializable{
 	@Column(length = 64, nullable=false)
 	private String cell;
 	@Column(length = 64, nullable=false)
-	private String githubUser;
+	private String githubuser;
 	@Column(length = 64, nullable=false)
 	private String location;
-	 
+	
 	public Long getId() {
 		return id;
 	}
@@ -49,18 +49,17 @@ public class Contact implements Serializable{
 	public void setCell(String cell) {
 		this.cell = cell;
 	}
-	
+	public String getGithubuser() {
+		return githubuser;
+	}
+	public void setGithubuser(String githubuser) {
+		this.githubuser = githubuser;
+	}
 	public String getLocation() {
 		return location;
 	}
 	public void setLocation(String location) {
 		this.location = location;
-	}
-	public String getGithubUser() {
-		return githubUser;
-	}
-	public void setGithubUser(String githubUser) {
-		this.githubUser = githubUser;
 	}
 	@Override
 	public int hashCode() {
@@ -68,7 +67,7 @@ public class Contact implements Serializable{
 		int result = 1;
 		result = prime * result + ((cell == null) ? 0 : cell.hashCode());
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
-		result = prime * result + ((githubUser == null) ? 0 : githubUser.hashCode());
+		result = prime * result + ((githubuser == null) ? 0 : githubuser.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((location == null) ? 0 : location.hashCode());
 		return result;
@@ -92,10 +91,10 @@ public class Contact implements Serializable{
 				return false;
 		} else if (!email.equals(other.email))
 			return false;
-		if (githubUser == null) {
-			if (other.githubUser != null)
+		if (githubuser == null) {
+			if (other.githubuser != null)
 				return false;
-		} else if (!githubUser.equals(other.githubUser))
+		} else if (!githubuser.equals(other.githubuser))
 			return false;
 		if (id == null) {
 			if (other.id != null)
@@ -109,9 +108,11 @@ public class Contact implements Serializable{
 			return false;
 		return true;
 	}
+	
 	@Override
 	public String toString() {
-		return "Contact [id=" + id + ", email=" + email + ", cell=" + cell + ", githubUser=" + githubUser
+		return "Contact [id=" + id + ", email=" + email + ", cell=" + cell + ", githubuser=" + githubuser
 				+ ", location=" + location + "]";
 	}
+	 
 }

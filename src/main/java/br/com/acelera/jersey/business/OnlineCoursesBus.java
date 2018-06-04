@@ -10,7 +10,7 @@ public class OnlineCoursesBus {
 		public List<OnlineCourses> listar() {
 		        return (List<OnlineCourses>) HibernateUtil.getSessionFactory()
 		                .openSession()
-		                .createQuery("from OnlineCourse")
+		                .createQuery("from OnlineCourses")
 		                .list();
 		   }
 }

@@ -77,7 +77,7 @@ public class BioDAO {
 		try {
 			PreparedStatement stmt = this.conexao.getConnection().prepareStatement(sqlQuery);
 			ResultSet rs = stmt.executeQuery();
-
+ 
 			while (rs.next()) {
 				return parserContact(rs);
 			}
@@ -200,7 +200,7 @@ public class BioDAO {
 		c.setId(resultSet.getLong("id"));
 		c.setCell(resultSet.getString("cell"));
 		c.setEmail(resultSet.getString("email"));
-		c.setGithubUser(resultSet.getString("githubUser"));
+		c.setGithubuser(resultSet.getString("githubUser"));
 		c.setLocation(resultSet.getString("location"));
 
 		return c;
@@ -239,7 +239,7 @@ public class BioDAO {
 		oc.setId(resultSet.getLong("id"));
 		oc.setName(resultSet.getString("name"));
 		oc.setMajor(resultSet.getString("major"));
-		oc.setGraduationYear(resultSet.getString("graduationyear"));
+		oc.setGraduationyear(resultSet.getString("graduationyear"));
 		oc.setUrl(resultSet.getString("url"));
 
 		return oc;

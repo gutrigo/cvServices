@@ -18,10 +18,9 @@ public class OnlineCourses {
 	@Column(length = 64, nullable=false)
 	private String major;
 	@Column(length = 64, nullable=false)
-	private String graduationYear;
+	private String graduationyear;
 	@Column(length = 128, nullable=false)
 	private String url;
-	
 	public long getId() {
 		return id;
 	}
@@ -40,11 +39,11 @@ public class OnlineCourses {
 	public void setMajor(String major) {
 		this.major = major;
 	}
-	public String getGraduationYear() {
-		return graduationYear;
+	public String getGraduationyear() {
+		return graduationyear;
 	}
-	public void setGraduationYear(String graduationYear) {
-		this.graduationYear = graduationYear;
+	public void setGraduationyear(String graduationyear) {
+		this.graduationyear = graduationyear;
 	}
 	public String getUrl() {
 		return url;
@@ -56,7 +55,7 @@ public class OnlineCourses {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((graduationYear == null) ? 0 : graduationYear.hashCode());
+		result = prime * result + ((graduationyear == null) ? 0 : graduationyear.hashCode());
 		result = prime * result + (int) (id ^ (id >>> 32));
 		result = prime * result + ((major == null) ? 0 : major.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
@@ -72,10 +71,10 @@ public class OnlineCourses {
 		if (getClass() != obj.getClass())
 			return false;
 		OnlineCourses other = (OnlineCourses) obj;
-		if (graduationYear == null) {
-			if (other.graduationYear != null)
+		if (graduationyear == null) {
+			if (other.graduationyear != null)
 				return false;
-		} else if (!graduationYear.equals(other.graduationYear))
+		} else if (!graduationyear.equals(other.graduationyear))
 			return false;
 		if (id != other.id)
 			return false;
@@ -98,7 +97,8 @@ public class OnlineCourses {
 	}
 	@Override
 	public String toString() {
-		return "OnlineCourses [id=" + id + ", name=" + name + ", major=" + major + ", graduationYear=" + graduationYear
+		return "OnlineCourses [id=" + id + ", name=" + name + ", major=" + major + ", graduationyear=" + graduationyear
 				+ ", url=" + url + "]";
 	}
+	
 }
